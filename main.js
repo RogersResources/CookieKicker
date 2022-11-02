@@ -4132,7 +4132,7 @@ Game.Launch = function() {
         }
 
         if (neuromancy && me.won == 0) tags.push(loc("Click to win!"), '#00c462');
-        else if (neuromancy && me.won > 0) tags.push(loc("Click to lose!"), '#00c462');
+        else if (Game.sesame && me.won > 0) tags.push(loc("Click to lose!"), '#00c462');
       }
 
       var tagsStr = '';
@@ -7233,7 +7233,7 @@ Game.Launch = function() {
     {
       var list = [];
 
-      var NEWS = loc("News :").replace(' ', '&nbsp;') + ' ';
+      var NEWS = loc("News:").replace(' ', '&nbsp;') + ' ';
 
       var loreProgress = Math.round(Math.log(Game.cookiesEarned / 10) * Math.LOG10E + 1 | 0);
 
@@ -18663,7 +18663,6 @@ Game.Launch = function() {
 
       l('debug').style.display = 'block';
       Game.sesame = 1;
-      Game.Achievements['Cheated cookies taste awful'].won = 1;
     }
 
     Game.EditAscend = function() {
