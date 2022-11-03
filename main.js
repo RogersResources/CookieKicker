@@ -10512,7 +10512,7 @@ Game.Launch = function() {
     });
 
     order = 40000;
-    new Game.Upgrade('Neuromancy', loc("Can toggle upgrades on and off at will in the stats menu.") + '<q>Can also come in handy to unsee things that can\'t be unseen.</q>', 7, [4, 9]); //debug purposes only
+    new Game.Upgrade('Neuromancy', loc("Can toggle upgrades on and off at will in the stats menu.") + '<q>Can also come in handy to unsee things that can\'t be unseen, but can\'t remove cheats.</q>', 7, [4, 9]); //debug purposes only
     Game.last.pool = 'debug';
 
     order = 10020;
@@ -14809,7 +14809,7 @@ Game.Launch = function() {
             var name = it.shortName ? it.shortName : it.dname;
             it.won = 1;
             if (what === "Cheated cookies taste awful") {
-              Game.Notify(loc("Achievement hacked"), '<div class="title" style="font-family:monospace;font-size:15px;margin-top:-2px;">You cheated some cookies</div>', it.icon);
+              Game.Notify(loc("Achievement unlocked"), '<div class="title" style="font-family:monospace;font-size:15px;margin-top:-2px;">You cheated some cookies >:)</div>', it.icon);
             } else {
               Game.Notify(loc("Achievement unlocked"), '<div class="title" style="font-size:18px;margin-top:-2px;">' + name + '</div>', it.icon);
             }
@@ -14827,7 +14827,7 @@ Game.Launch = function() {
     }
     Game.RemoveAchiev = function(what) {
       if (Game.Achievements[what]) {
-        if (Game.Achievements[what].won == 1) {
+        if (Game.Achievements[what].won == 1 && what !== "Cheated cookies taste awful" && what !== "Third-party") {
           Game.Achievements[what].won = 0;
           if (Game.CountsAsAchievementOwned(Game.Achievements[what].pool)) Game.AchievementsOwned--;
           Game.recalculateGains = 1;
