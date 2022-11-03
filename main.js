@@ -10438,6 +10438,7 @@ Game.Launch = function() {
 
     order = 40000;
     new Game.Upgrade('Ultrascience', loc("Research takes only <b>5 seconds</b>.") + '<q>YEAH, SCIENCE!</q>', 7, [9, 2]); //debug purposes only
+    new Game.Upgrade('Mmmmhmmm', loc("this is a test.") + '<q>YESSIR!</q>', 7, [9, 2])
     Game.last.pool = 'debug';
 
     order = 10020;
