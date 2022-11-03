@@ -11,7 +11,9 @@
       interval = setInterval(() => {
         Game.lastClick -= 1000
         document.getElementById("bigCookie").click()
-      }, 1)
+        Game.lastClick -= 1000
+        document.getElementById("bigCookie").click()
+      }, 4)
     }
     // HACK
     onkeydown = e => {
