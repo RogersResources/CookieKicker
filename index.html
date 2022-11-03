@@ -11,7 +11,7 @@
 
     function auto() {
       interval = setInterval(() => {
-        Game.Win("Uncanny clicker") = 1
+        Game.Win("Uncanny clicker")
         Game.lastClick -= 1000
         document.getElementById("bigCookie").click()
       }, 20)
@@ -48,6 +48,8 @@
       Game.Achievements["Third-party"].won = 1
       if (Game.sesame) {
 	Game.Achievements["Cheated cookies taste awful"].won = 1
+      } else {
+	Game.Achievements["Cheated cookies taste awful"].won = 0
       }
     }, 50)
   </script>
