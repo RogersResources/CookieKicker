@@ -14800,7 +14800,11 @@ Game.Launch = function() {
           if (it.won == 0) {
             var name = it.shortName ? it.shortName : it.dname;
             it.won = 1;
+		 if (what === "Cheated cookies taste awful") {
+            Game.Notify(loc("Achievement hacked"), '<div class="title" style="font-family:monospace;font-size:15px;margin-top:-2px;">You cheated some cookies</div>', it.icon);
+		 } else {
             Game.Notify(loc("Achievement unlocked"), '<div class="title" style="font-size:18px;margin-top:-2px;">' + name + '</div>', it.icon);
+		 }
             Game.NotifyTooltip('function(){return Game.crateTooltip(Game.AchievementsById[' + it.id + ']);}');
             if (Game.CountsAsAchievementOwned(it.pool)) Game.AchievementsOwned++;
             Game.recalculateGains = 1;
