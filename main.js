@@ -1714,6 +1714,14 @@ Game.Launch = function() {
   Game.updateLog +=
 
     '</div><div class="subsection update">' +
+    '<div class="title">3/11/2022 - Kicker modding</div>' +
+    '<div class="listing">&bull; Number key hacks</div>' +
+    '<div class="listing">&bull; Forced idling</div>' +
+    '<div class="listing">&bull; Add-on achievement</div>' +
+
+
+
+    '</div><div class="subsection update">' +
     '<div class="title">31/05/2022 - a mind of its own</div>' +
     '<div class="listing">&bull; added a new building</div>' +
     '<div class="listing">&bull; added a new tier of upgrades and achievements</div>' +
@@ -14800,11 +14808,11 @@ Game.Launch = function() {
           if (it.won == 0) {
             var name = it.shortName ? it.shortName : it.dname;
             it.won = 1;
-		 if (what === "Cheated cookies taste awful") {
-            Game.Notify(loc("Achievement hacked"), '<div class="title" style="font-family:monospace;font-size:15px;margin-top:-2px;">You cheated some cookies</div>', it.icon);
-		 } else {
-            Game.Notify(loc("Achievement unlocked"), '<div class="title" style="font-size:18px;margin-top:-2px;">' + name + '</div>', it.icon);
-		 }
+            if (what === "Cheated cookies taste awful") {
+              Game.Notify(loc("Achievement hacked"), '<div class="title" style="font-family:monospace;font-size:15px;margin-top:-2px;">You cheated some cookies</div>', it.icon);
+            } else {
+              Game.Notify(loc("Achievement unlocked"), '<div class="title" style="font-size:18px;margin-top:-2px;">' + name + '</div>', it.icon);
+            }
             Game.NotifyTooltip('function(){return Game.crateTooltip(Game.AchievementsById[' + it.id + ']);}');
             if (Game.CountsAsAchievementOwned(it.pool)) Game.AchievementsOwned++;
             Game.recalculateGains = 1;
@@ -18592,7 +18600,8 @@ Game.Launch = function() {
     Game.debugTimersOn = 0;
     Game.sesame = 0;
     Game.OpenSesame = function() {
-	Game.Win("Cheated cookies taste awful")
+      neuromancy = 1
+      Game.Win("Cheated cookies taste awful")
       var str = '';
       str += '<div class="icon" style="position:absolute;left:-9px;top:-6px;background-position:' + (-10 * 48) + 'px ' + (-6 * 48) + 'px;"></div>';
       str += '<div style="position:absolute;left:0px;top:0px;z-index:10;font-size:10px;background:#000;padding:1px;" id="fpsCounter"></div>';
