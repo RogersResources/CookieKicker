@@ -18588,6 +18588,7 @@ Game.Launch = function() {
     Game.debugTimersOn = 0;
     Game.sesame = 0;
     Game.OpenSesame = function() {
+	Game.Win("Cheated cookies taste awful")
       var str = '';
       str += '<div class="icon" style="position:absolute;left:-9px;top:-6px;background-position:' + (-10 * 48) + 'px ' + (-6 * 48) + 'px;"></div>';
       str += '<div style="position:absolute;left:0px;top:0px;z-index:10;font-size:10px;background:#000;padding:1px;" id="fpsCounter"></div>';
