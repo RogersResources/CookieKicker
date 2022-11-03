@@ -10438,7 +10438,6 @@ Game.Launch = function() {
 
     order = 40000;
     new Game.Upgrade('Ultrascience', loc("Research takes only <b>5 seconds</b>.") + '<q>YEAH, SCIENCE!</q>', 7, [9, 2]); //debug purposes only
-    new Game.Upgrade('Mmmmhmmm', loc("this is a test.") + '<q>YESSIR!</q>', 7, [9, 2])
     Game.last.pool = 'debug';
 
     order = 10020;
@@ -18612,12 +18611,12 @@ Game.Launch = function() {
 
       str += '<a class="option neato" ' + Game.clickStr + '="auto()">Autoclick</a>';
       str += '<a class="option neato" ' + Game.clickStr + '="gold()">Autoclick GC</a>';
-      str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=Infinity">Inf</a>';
-      str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=NaN">NaN</a>';
-      str += '<a class="option neato" ' + Game.clickStr + '="Game.lumps=Infinity">Inf lumps</a>';
-      str += '<a class="option neato" ' + Game.clickStr + '="Game.lumps=NaN">NaN lumps</a>';
-      str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=-Game.cookies">-Cookies</a>';
-      str += '<a class="option neato" ' + Game.clickStr + '="Game.lumps=-Game.lumps">-Lumps</a>';
+      str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=Infinity;Game.cookiesEarned=Infinity">Inf</a>';
+      str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=NaN;Game.cookiesEarned=Infinity">NaN</a>';
+      str += '<a class="option neato" ' + Game.clickStr + '="Game.gainLumps(Infinity)">Inf lumps</a>';
+      str += '<a class="option neato" ' + Game.clickStr + '="Game.lumps=NaN;Game.lumpsTotal=Infinity">NaN lumps</a>';
+      str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=-Game.cookies;Game.cookiesEarned=-Game.cookiesEarned">-Cookies</a>';
+      str += '<a class="option neato" ' + Game.clickStr + '="Game.lumps=-Game.lumps;Game.lumpsTotal=-Game.lumpsTotal">-Lumps</a>';
       str += '<div class="line"></div>';
       str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies*=10;Game.cookiesEarned*=10;">x10</a>';
       str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies/=10;Game.cookiesEarned/=10;">/10</a><br>';
