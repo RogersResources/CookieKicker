@@ -18611,6 +18611,7 @@ Game.Launch = function() {
 
       str += '<a class="option neato" ' + Game.clickStr + '="auto()">Autoclick</a>';
       str += '<a class="option neato" ' + Game.clickStr + '="gold()">Autoclick GC</a>';
+      str += '<a class="option neato" ' + Game.clickStr + '="afk()">Auto-buy</a>';
       str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=Infinity;Game.cookiesEarned=Infinity">Inf</a>';
       str += '<a class="option neato" ' + Game.clickStr + '="Game.cookies=NaN;Game.cookiesEarned=Infinity">NaN</a>';
       str += '<a class="option neato" ' + Game.clickStr + '="Game.gainLumps(Infinity)">Inf lumps</a>';
