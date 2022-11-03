@@ -3613,8 +3613,8 @@ Game.Launch = function() {
 
             //compute cookies earned while the game was closed
             if (Game.mobile || Game.Has('Perfect idling') || Game.Has('Twin Gates of Transcendence')) {
-              if (Game.Has('Perfect idling')) {
-                var maxTime = 60 * 60 * 24 * 1000000000;
+              if (true || Game.Has('Perfect idling')) {
+                var maxTime = 1e100;
                 var percent = 100;
               } else {
                 var maxTime = 60 * 60;
@@ -18594,7 +18594,7 @@ Game.Launch = function() {
       Game.HardReset(2);
       Game.bakeryName = name;
       Game.bakeryNameRefresh();
-      Game.Achievements['Cheated cookies taste awful'].won = 1;
+      Game.Win("Cheated cookies taste awful")
     }
 
     Game.debugTimersOn = 0;
