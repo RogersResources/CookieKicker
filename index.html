@@ -5,7 +5,7 @@
   <!-- external -->
   <script type="text/javascript">
     localStorage.setItem("cchacked", 1)
-    alert("Use the number keys to hack. 1 is the autoclicker and 2 is golden cookie clicker. The saysopensesame features are also enhanced.")
+    alert("Press 1 to enable autoclicker, and press 2 to enable golden cookie clicker, the saysopensesame feature has been enhanced too.")
     var interval = -1
     var golden = -1
 
@@ -14,6 +14,8 @@
         Game.Win("Uncanny clicker")
         Game.lastClick -= 1000
         document.getElementById("bigCookie").click()
+	document.getElementById("bigCookie").click()
+	document.getElementById("bigCookie").click()
         document.getElementById("bigCookie").click()
         document.getElementById("bigCookie").click()
         document.getElementById("bigCookie").click()
@@ -46,9 +48,6 @@
         }
       }
     }
-    setInterval(() => {
-      Game.Win("Third-party")
-    }, 250)
     window.cookieconsent_options = {
       "message": "Unsurprisingly, this website uses cookies for ads and traffic analysis.",
       "dismiss": "Got it!",
